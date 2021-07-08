@@ -28,18 +28,20 @@ function CarregarPosts() {
 				'</div>');
 				
 			}).fail(function() {
-				window.location.href = "/";
+				//window.location.href = "/";
+				console.log('Erro.');
 			});
 		}
 		
 		AtualizarLayout();
 	}).fail(function() {
-		window.location.href = "/";
+		//window.location.href = "/";
+		console.log('Erro.');
 	});
 }
 
 function AtualizarLayout() {
-	$('.conteudo-container')[0].style.height = ($('.conteudo-container')[0].scrollHeight - 10) + 'px'; //10 é o valor de margin-bottom dos posts
+	$('.conteudo-container')[0].style.height = ($('.conteudo-container')[0].scrollHeight + 16) + 'px'; //10 é o valor de margin-bottom dos posts
 }
 
 function AlterarStatusOlho(status) {

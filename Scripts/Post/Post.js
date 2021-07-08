@@ -15,10 +15,16 @@ function CarregarPost() {
 		$.get(post.Url, function(data2) {
 			$('#post-titulo').html(post.Titulo);
 			$('#post-conteudo').html(data2);
+			
+			AtualizarLayout();
 		}).fail(function() {
 			window.location.href = "/";
 		});
 	}).fail(function() {
 		window.location.href = "/";
 	});
+}
+
+function AtualizarLayout() {
+	$('.conteudo-container')[0].style.height = ($('.conteudo-container')[0].scrollHeight + 16) + 'px'; //10 é o valor de margin-bottom dos posts
 }
