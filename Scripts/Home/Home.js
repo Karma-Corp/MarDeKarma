@@ -3,7 +3,6 @@
 function CarregarPosts() {
 	$.get("Posts/PostList", function(data) {
 		var postList = JSON.parse(data);
-		postList.reverse();
 		
 		var esquerdaContainer = $('#conteudo-esquerda-container');
 		
