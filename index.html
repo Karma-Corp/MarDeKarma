@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Mar de Karma</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Livvic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mukta+Mahee" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kumbh+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="Content/Bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="Content/Site.css" />
+    <script src="Scripts/JQuery/jquery-3.5.1.min.js"></script>
+</head>
+<body class="dp-absolute-zero">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow template-header dp02 full-white">
+            <div class="navbar-container">
+                <a class="navbar-brand purple-200 livvic" href="/">Mar de Karma</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="template-conteudo">
+        <head>
+			<link rel="stylesheet" href="Content/Home/Home.css" />
+			<link rel="stylesheet" href="Content/Post/Post.css" />
+			<link rel="stylesheet" href="Content/SineWave/SineWave.css" />
+		</head>
+
+		<div class="conteudo-container">
+
+			<div id="conteudo-esquerda-container" class="conteudo-esquerda-container"></div>
+
+			<div class="conteudo-direita-container">
+				<div class="direita-item-container">
+					<div class="fw fh dp02">
+						<div class="olho-container">
+							<img id="olho-img" class="olho svg-filtro-purple-200 olho-shake-slow" src="Content/images/olhos/olho-6.svg">
+						</div>
+						<svg id="sinewave-svg-1">
+							<path id="sinewave-svg-1-path" d="M10,10 L50,100 L90,50"></path>
+						</svg>
+						<svg id="sinewave-svg-2">
+							<path id="sinewave-svg-2-path" d="M10,10 L50,100 L90,50"></path>
+						</svg>
+						<svg id="sinewave-svg-3">
+							<path id="sinewave-svg-3-path" d="M10,10 L50,100 L90,50"></path>
+						</svg>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<script src="Scripts/SineWave/SineWave.js"></script>
+		<script src="Scripts/Home/Home.js"></script>
+    </div>
+
+    <footer class="footer text-muted dp01 medium-white">
+        <div class="container">
+            &copy; 2021 - Mar de Karma
+        </div>
+    </footer>
+    <script src="Scripts/Bootstrap/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

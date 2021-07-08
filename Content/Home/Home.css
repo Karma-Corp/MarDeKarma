@@ -1,0 +1,155 @@
+﻿/* TEMPLATES */
+.conteudo-container {
+    width: 1060px;
+    height: 100%;
+    margin: auto;
+}
+
+.conteudo-esquerda-container {
+    width: 700px;
+    height: 100%;
+    margin-right: 10px;
+    float: left;
+}
+
+/*.esquerda-item-container {
+    width: 100%;
+    height: 700px;
+    margin-bottom: 10px;
+}*/
+
+.esquerda-item-container {
+    width: 100%;
+    min-height: 175px;
+    max-height: 300px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    display: flex;
+    border: 1px solid rgba(255,255,255, 0.15);
+}
+
+    .esquerda-item-container:hover {
+        border: 1px solid rgba(255,255,255, 0.3);
+    }
+
+.conteudo-direita-container {
+    width: 350px;
+    height: auto;
+    margin-left: 0;
+    float: right;
+    position: sticky;
+    top: 10px;
+}
+
+.direita-item-container {
+    width: 100%;
+    height: 350px;
+    border: 1px solid rgba(255,255,255, 0.15);
+}
+
+/* OLHO */
+.olho-container {
+    display: flex;
+}
+
+.olho {
+    width: 200px;
+    margin: auto;
+    margin-top: -20px;
+}
+
+.olho-shake-slow {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake-slow 10s;
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+.olho-shake-fast {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake-fast 0.2s;
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake-slow {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-10px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(10px, 10px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 10px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-10px, -10px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+}
+
+@keyframes shake-fast {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-1px, -1px) rotate(-1deg);
+    }
+}
