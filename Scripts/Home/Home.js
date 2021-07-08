@@ -1,37 +1,37 @@
-﻿$(function () {
-    CarregarPosts();
-});
+﻿CarregarPosts();
 
 function CarregarPosts() {
-	$.ajax({
-		type: "POST",
-		url: "/Home/CarregarPosts",
-		success: function (response) {
-			var esquerdaContainer = $('#conteudo-esquerda-container');
-
-			for (var i in response) {
+	$.get("Posts/PostList", function(data) {
+		var postList = JSON.parse(data);
+		
+		var esquerdaContainer = $('#conteudo-esquerda-container');
+		
+		for (var i in postList) {
+			$.get(postList[i].Url, function(data2) {
 				esquerdaContainer.append(
-					'<div class="esquerda-item-container">' +
-						'<div class="fw dp02">' +
-							'<div id="post-id-' + response[i].Id + '" class="post-home-container high-white fw fh">' +
-								'<a href="/Post/Visualizar/' + response[i].Id +'" class="link-reset">' +
-									'<div class="post-titulo kumbh-sans">' +
-									response[i].Titulo +
-									'</div>'+
-									'<div class="post-conteudo open-sans">' +
-									response[i].Conteudo +
-									'</div>' +
-								'</a>' +
-							'</div>' +
+				'<div class="esquerda-item-container">' +
+					'<div class="fw dp02">' +
+						'<div id="post-id-' + postList[i].Id + '" class="post-home-container high-white fw fh">' +
+							'<a href="/Post/Visualizar/' + postList[i].Id +'" class="link-reset">' +
+								'<div class="post-titulo kumbh-sans">' +
+								postList[i].Titulo +
+								'</div>'+
+								'<div class="post-conteudo open-sans">' +
+								data2 +
+								'</div>' +
+							'</a>' +
 						'</div>' +
-					'</div>');
-			}
-
-			AtualizarLayout();
-		},
-		error: function (req, status, error) {
-			console.log(req.responseText);
+					'</div>' +
+				'</div>');
+				
+			}).fail(function() {
+				window.location.href = "/";
+			});
 		}
+		
+		AtualizarLayout();
+	}).fail(function() {
+		window.location.href = "/";
 	});
 }
 

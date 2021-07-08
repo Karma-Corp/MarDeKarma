@@ -1,4 +1,6 @@
-﻿function CarregarPost() {
+﻿CarregarPost();
+
+function CarregarPost() {
 	let urlParams = new URLSearchParams(window.location.search);
 	let postId = urlParams.get('p');
 	
@@ -20,5 +22,3 @@
 		window.location.href = "/";
 	});
 }
-
-CarregarPost();
