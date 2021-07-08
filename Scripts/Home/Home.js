@@ -3,18 +3,22 @@
 function CarregarPosts() {
 	$.get("Posts/PostList", function(data) {
 		var postList = JSON.parse(data);
+		postList.reverse();
 		
 		var esquerdaContainer = $('#conteudo-esquerda-container');
 		
 		for (var i in postList) {
 			$.get(postList[i].Url, function(data2) {
+				var url = this.url;
+				var post = postList.find(elem => elem.Url == url);
+				
 				esquerdaContainer.append(
 				'<div class="esquerda-item-container">' +
 					'<div class="fw dp02">' +
-						'<div id="post-id-' + postList[i].Id + '" class="post-home-container high-white fw fh">' +
-							'<a href="/post?p=' + postList[i].Id +'" class="link-reset">' +
+						'<div id="post-id-' + post.Id + '" class="post-home-container high-white fw fh">' +
+							'<a href="/post?p=' + post.Id +'" class="link-reset">' +
 								'<div class="post-titulo kumbh-sans">' +
-								postList[i].Titulo +
+								post.Titulo +
 								'</div>'+
 								'<div class="post-conteudo open-sans">' +
 								data2 +
