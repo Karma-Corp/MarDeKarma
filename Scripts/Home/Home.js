@@ -12,7 +12,7 @@ function CarregarPosts() {
 				'<div class="esquerda-item-container">' +
 					'<div class="fw dp02">' +
 						'<div id="post-id-' + postList[i].Id + '" class="post-home-container high-white fw fh">' +
-							'<a href="/Post/Visualizar/' + postList[i].Id +'" class="link-reset">' +
+							'<a href="/post?p=' + postList[i].Id +'" class="link-reset">' +
 								'<div class="post-titulo kumbh-sans">' +
 								postList[i].Titulo +
 								'</div>'+
