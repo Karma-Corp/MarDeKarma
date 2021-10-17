@@ -26,5 +26,5 @@ function CarregarPost() {
 }
 
 function AtualizarLayout() {
-	$('.conteudo-container')[0].style.height = ($('.conteudo-container')[0].scrollHeight) + 'px'; //10 é o valor de margin-bottom dos posts
+	$('.conteudo-container')[0].style.height = ($('.conteudo-container')[0].scrollHeight + 20) + 'px'; //10 é o valor de margin-bottom dos posts
 }
