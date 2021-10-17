@@ -16,7 +16,7 @@ function CarregarPost() {
 			$('#post-titulo').html(post.Titulo);
 			$('#post-conteudo').html(data2);
 			
-			AtualizarLayout();
+			//AtualizarLayout();
 		}).fail(function() {
 			window.location.href = "/";
 		});
