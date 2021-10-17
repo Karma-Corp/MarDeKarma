@@ -38,4 +38,5 @@
 
 .conteudo-container {
 	min-height: calc(100vh - 132px);
+	padding-bottom: 20px;
 }
